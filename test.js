@@ -1,14 +1,10 @@
 
-const {
+import {
   Builder,
   By,
-  Key,
-  until,
   Capabilities,
-  logging,
-} = require('selenium-webdriver');
-const assert = require("assert");
-
+} from "selenium-webdriver";
+import assert from "assert";
 
 async function test() {
   let capabilities;
