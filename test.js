@@ -33,6 +33,7 @@ async function test() {
   await driver.get(`http://example.com`);
   let text = await driver.findElement(By.css("h1")).getText();
   console.log(`Header is ${text}`);
+  console.log(`UA is ${await driver.executeScript("return navigator.userAgent")}`);
 
   assert(text == "Example Domain");
   driver.quit();
